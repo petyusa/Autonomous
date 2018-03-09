@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F439211-F2C5-4A1B-80D2-FB1D152A1E32}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Autonomous.Impl</RootNamespace>
+    <AssemblyName>Autonomous.Impl</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AgentFactory.cs" />
+    <Compile Include="CarGame.cs" />
+    <Compile Include="Commands\ManualViewportSelectionCommand.cs" />
+    <Compile Include="Commands\AutoViewportSelectionCommand.cs" />
+    <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Commands\IGameCommand.cs" />
+    <Compile Include="FrameCounter.cs" />
+    <Compile Include="GameObjects\FinishLine.cs" />
+    <Compile Include="Scoring\PlayerScore.cs" />
+    <Compile Include="Scoring\ScoreCalculator.cs" />
+    <Compile Include="Scoring\ScoreCsvExporter.cs" />
+    <Compile Include="Scoring\ScoreFormatter.cs" />
+    <Compile Include="Utilities\FloatExtensions.cs" />
+    <Compile Include="Viewports\CameraSetup.cs" />
+    <Compile Include="Viewports\FinishLineViewport.cs" />
+    <Compile Include="Viewports\ViewportManager.cs" />
+    <Compile Include="CourseObjectFactory.cs" />
+    <Compile Include="Dashboard.cs" />
+    <Compile Include="GameStateMapper.cs" />
+    <Compile Include="GameObjects\Barrier.cs" />
+    <Compile Include="GameObjects\Terrain.cs" />
+    <Compile Include="GameObjects\City.cs" />
+    <Compile Include="GameObjects\LigthingEffect.cs" />
+    <Compile Include="GameObjects\Tree.cs" />
+    <Compile Include="GameObjects\BuildingA.cs" />
+    <Compile Include="GameObjects\CarAgent.cs" />
+    <Compile Include="GameObjects\Car.cs" />
+    <Compile Include="GameObjects\CollisionDetector.cs" />
+    <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\Road.cs" />
+    <Compile Include="GameStateInternal.cs" />
+    <Compile Include="GameStateManager.cs" />
+    <Compile Include="PlayerGameLoop.cs" />
+    <Compile Include="PlayerFactory.cs" />
+    <Compile Include="Strategies\BusStrategy.cs" />
+    <Compile Include="Strategies\IControlStrategy.cs" />
+    <Compile Include="Strategies\OvertakingStrategy.cs" />
+    <Compile Include="Strategies\KeepSafetyDistance.cs" />
+    <Compile Include="Strategies\ControlState.cs" />
+    <Compile Include="ViewportFactory.cs" />
+    <Compile Include="Viewports\BirdsEyeViewport.cs" />
+    <Compile Include="Viewports\GameObjectViewport.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quad.cs" />
+    <Compile Include="Viewports\ViewportWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.WindowsDX.3.6.0.1625\lib\net40\MonoGame.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Buildings\Building2\building.png" />
+    <Content Include="Content\Buildings\Building2\building2.png" />
+    <Content Include="Content\Buildings\Building2\building3.png" />
+    <Content Include="Content\Buildings\Building2\building4.png" />
+    <Content Include="Content\Buildings\Building2\building5.png" />
+    <Content Include="Content\Buildings\Building2\texteur\AC.jpg" />
+    <Content Include="Content\Buildings\Building2\texteur\brack.jpg" />
+    <Content Include="Content\Buildings\Building2\texteur\brackNM.jpg" />
+    <Content Include="Content\Buildings\Building2\texteur\door.png" />
+    <Content Include="Content\Buildings\Building2\texteur\door2.png" />
+    <Content Include="Content\Buildings\Building2\texteur\iron.jpg" />
+    <Content Include="Content\Buildings\Building2\texteur\store.png" />
+    <Content Include="Content\Buildings\Building2\texteur\storeNM.png" />
+    <Content Include="Content\Buildings\Building2\texteur\top.jpg" />
+    <Content Include="Content\Buildings\Building2\texteur\topNM.jpg" />
+    <Content Include="Content\Buildings\Building2\texteur\w2.png" />
+    <Content Include="Content\Buildings\Building2\texteur\w2NM.png" />
+    <Content Include="Content\Buildings\Building2\texteur\wf.jpg" />
+    <Content Include="Content\Buildings\Building2\texteur\window1.jpg" />
+    <Content Include="Content\Buildings\Building2\texteur\window2.png" />
+    <Content Include="Content\Buildings\Building2\texteur\window3.png" />
+    <Content Include="Content\BusStop\bus_stop_sign.png" />
+    <Content Include="Content\BusStop\pomidor.jpg" />
+    <Content Include="Content\BusStop\wood.jpg" />
+    <Content Include="Content\BusStop\wood_bump.jpg" />
+    <Content Include="Content\Cars\GLX_400\Front_Light.jpg" />
+    <Content Include="Content\Cars\GLX_400\Light_Back.jpg" />
+    <Content Include="Content\Cars\GLX_400\Tire.png" />
+    <Content Include="Content\Cars\Porshe\0000-a.BMP" />
+    <Content Include="Content\Cars\Porshe\0000.BMP" />
+    <Content Include="Content\Cars\Porshe\0001.BMP" />
+    <Content Include="Content\Cars\Porshe\0002.BMP" />
+    <Content Include="Content\Cars\Porshe\car\0000-a.BMP" />
+    <Content Include="Content\Cars\Porshe\car\0000.BMP" />
+    <Content Include="Content\Cars\Porshe\car\0001-a.BMP" />
+    <Content Include="Content\Cars\Porshe\car\0001.BMP" />
+    <Content Include="Content\Cars\Porshe\car\0002-a.BMP" />
+    <Content Include="Content\Cars\Porshe\car\0002.BMP" />
+    <Content Include="Content\Cars\Porshe\maps\0000-a.BMP" />
+    <Content Include="Content\Cars\Porshe\maps\0000.BMP" />
+    <Content Include="Content\Cars\Porshe\maps\0001.BMP" />
+    <Content Include="Content\Cars\Porshe\skin00\0000-a.BMP" />
+    <Content Include="Content\Cars\Porshe\skin00\0000.BMP" />
+    <Content Include="Content\Cars\Porshe\skinhp\0000-a.BMP" />
+    <Content Include="Content\Cars\Porshe\skinhp\0000.BMP" />
+    <Content Include="Content\Cars\Pride\BackLight.jpg" />
+    <Content Include="Content\Cars\Pride\GuidLigh_Side.jpg" />
+    <Content Include="Content\Cars\Pride\HeadLight.jpg" />
+    <Content Include="Content\Cars\Pride\Plaque.png" />
+    <Content Include="Content\Cars\Pride\Tire_400.png" />
+    <Content Include="Content\City\ang1.jpg" />
+    <Content Include="Content\City\c1.jpg" />
+    <Content Include="Content\City\c10.jpg" />
+    <Content Include="Content\City\c11.jpg" />
+    <Content Include="Content\City\c12.jpg" />
+    <Content Include="Content\City\c2.jpg" />
+    <Content Include="Content\City\c3.jpg" />
+    <Content Include="Content\City\c4.jpg" />
+    <Content Include="Content\City\c5.jpg" />
+    <Content Include="Content\City\c6.jpg" />
+    <Content Include="Content\City\c7.jpg" />
+    <Content Include="Content\City\c8.jpg" />
+    <Content Include="Content\City\c9.jpg" />
+    <Content Include="Content\City\cty1.jpg" />
+    <Content Include="Content\City\cty2x.jpg" />
+    <Content Include="Content\City\Maps\ang1.jpg" />
+    <Content Include="Content\City\Maps\cty1.jpg" />
+    <Content Include="Content\City\Maps\cty2x.jpg" />
+    <Content Include="Content\City\readme The City.txt" />
+    <Content Include="Content\Lambo\Lamborginhi_Aventador_diffuse.jpeg" />
+    <Content Include="Content\Lambo\Lamborginhi_Aventador_gloss.jpeg" />
+    <Content Include="Content\Lambo\Lamborginhi_Aventador_spec.jpeg" />
+    <Content Include="Content\Tree\bark.jpg" />
+    <Content Include="Content\Tree\branch.png" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Content\Buildings\Building2\building.3ds" />
+    <None Include="Content\Buildings\Building2\building.blend" />
+    <None Include="Content\Buildings\Building2\building.fbx" />
+    <None Include="Content\Buildings\Building2\building.obj" />
+    <None Include="Content\BusStop\bus_stop.mtl" />
+    <None Include="Content\BusStop\bus_stop.obj" />
+    <None Include="Content\BusStop\Thumbs.db" />
+    <None Include="Content\Cars\GLX_400\GLX_400.mtl" />
+    <None Include="Content\Cars\GLX_400\GLX_400.obj" />
+    <None Include="Content\Cars\Porshe\carrgt.max" />
+    <None Include="Content\Cars\Porshe\carrgt.mtl" />
+    <None Include="Content\Cars\Porshe\carrgt.obj" />
+    <None Include="Content\Cars\Porshe\car\index.fsh" />
+    <None Include="Content\Cars\Porshe\maps\Map__6_Raytrace.tga" />
+    <None Include="Content\Cars\Porshe\maps\Map__7_Raytrace.tga" />
+    <None Include="Content\Cars\Porshe\maps\Map__8_Raytrace.tga" />
+    <None Include="Content\Cars\Porshe\Map__6_Raytrace.tga" />
+    <None Include="Content\Cars\Porshe\Map__7_Raytrace.tga" />
+    <None Include="Content\Cars\Porshe\Map__8_Raytrace.tga" />
+    <None Include="Content\Cars\Porshe\skin00\index.fsh" />
+    <None Include="Content\Cars\Porshe\skinhp\index.fsh" />
+    <None Include="Content\Cars\Pride\Pride_400.mtl" />
+    <None Include="Content\Cars\Pride\Pride_400.obj" />
+    <None Include="Content\City\The City.mtl" />
+    <None Include="Content\City\The City.obj" />
+    <None Include="Content\City\The_City.mtl" />
+    <None Include="Content\Lambo\Lamborghini_Aventador.mtl" />
+    <None Include="Content\Lambo\Lamborghini_Aventador.obj" />
+    <None Include="Content\Lambo\workspace.mel" />
+    <None Include="Content\Tree\fir.mtl" />
+    <None Include="Content\Tree\fir.obj" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Autonomous.Public\Autonomous.Public.csproj">
+      <Project>{08ef91c4-856e-4cd8-a0dd-d962fb4a27d1}</Project>
+      <Name>Autonomous.Public</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Buildings\BuildingB\" />
+    <Folder Include="Content\Buildings\GasStation\" />
+    <Folder Include="Content\BusStop\textures\" />
+    <Folder Include="Content\fonts\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

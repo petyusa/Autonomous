@@ -1,0 +1,60 @@
+#
+#
+#
+
+newmtl  Mesh_BuildingA_Door
+illum 1
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 1.000000
+map_Kd BuildingA_Door.bmp
+
+newmtl  Mesh_BuildingA_Floor
+illum 1
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 1.000000
+map_Kd BuildingA_Floor.bmp
+
+newmtl  Mesh_BuildingA_Grey
+illum 1
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 1.000000
+map_Kd BuildingA_Grey.bmp
+
+newmtl  Mesh_BuildingA_Red
+illum 1
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 1.000000
+map_Kd BuildingA_Red.bmp
+
+newmtl  Mesh_BuildingA_Rooftop
+illum 1
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 1.000000
+map_Kd BuildingA_Rooftop.bmp
+
+newmtl  Mesh_BuildingA_Rooftop2
+illum 1
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 1.000000
+map_Kd BuildingA_Rooftop2.bmp
+
+newmtl  Mesh_BuildingA_Window
+illum 1
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 1.000000
+map_Kd BuildingA_Window.bmp
+

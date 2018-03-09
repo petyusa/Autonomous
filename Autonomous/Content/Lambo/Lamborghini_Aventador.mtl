@@ -1,0 +1,51 @@
+#
+#
+#
+
+newmtl Lamborghini_Aventador:Body Mesh_Lamborghini_Aventador:BodySG
+illum 2
+Ka 0.200000 0.200000 0.200000
+Kd 0.800000 0.800000 0.000000
+Ks 0.800000 0.800000 0.800000
+Ns 18.000000
+map_Kd Lamborginhi_Aventador_diffuse.jpeg
+
+newmtl Lamborghini_Aventador:Glass Mesh_Lamborghini_Aventador:GlassSG
+illum 2
+Ka 0.300000 0.300000 0.300000
+Kd 0.600000 0.600000 0.600000
+Ks 0.700000 0.700000 0.700000
+Ns 1.000000
+
+newmtl Lamborghini_Aventador:Wheel_FL Mesh_Lamborghini_Aventador:BodySG
+illum 2
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.900000 0.900000 0.900000
+Ns 18.000000
+map_Kd Lamborginhi_Aventador_diffuse.jpeg
+
+newmtl Lamborghini_Aventador:Wheel_FR Mesh_Lamborghini_Aventador:BodySG
+illum 2
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.900000 0.900000 0.900000
+Ns 18.000000
+map_Kd Lamborginhi_Aventador_diffuse.jpeg
+
+newmtl Lamborghini_Aventador:Wheel_RL Mesh_Lamborghini_Aventador:BodySG
+illum 2
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.900000 0.900000 0.900000
+Ns 18.000000
+map_Kd Lamborginhi_Aventador_diffuse.jpeg
+
+newmtl Lamborghini_Aventador:Wheel_RR Mesh_Lamborghini_Aventador:BodySG
+illum 2
+Ka 0.500000 0.500000 0.500000
+Kd 0.800000 0.800000 0.800000
+Ks 0.900000 0.900000 0.900000
+Ns 18.000000
+map_Kd Lamborginhi_Aventador_diffuse.jpeg
+

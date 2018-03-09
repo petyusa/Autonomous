@@ -1,0 +1,20 @@
+#
+#
+#
+
+newmtl bldgs2 Mesh Mesh Mesh_Default - Lambert
+illum 1
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 1.000000
+map_Kd cty1.jpg
+
+newmtl mesh01 Mesh Mesh Mesh_Default - Lambert
+illum 1
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 1.000000
+map_Kd cty1.jpg
+
